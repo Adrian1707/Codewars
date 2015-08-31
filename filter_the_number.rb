@@ -1,6 +1,8 @@
 def filter_string(string)
+   num = 20
    string.delete("^0-9").to_i
  	end 
+
 
 print filter_string("abc5th3")
 #print filter_string('ab1707cd')
