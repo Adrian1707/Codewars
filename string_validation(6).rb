@@ -11,7 +11,7 @@ def validation(string)
 end
 
 
-print validation("7")
+print validation("0")
 
 
 
