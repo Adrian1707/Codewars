@@ -1,19 +1,8 @@
 def find_outlier(integers)
-  evens = []
-  odds = []
-  integers.each do |x|
-    if x.even?
-      evens << x
-    else
-      odds << x
-    end
-  end
-  if odds.count == 1
-    return odds[0]
-  elsif evens.count == 1
-    return evens[0]
-  end
+  even,odd = integers.partition { |num| num.even? }
+  even.length > odd.length ? odd[0] : even[0]
 end
+
 
 print find_outlier([2,6,8,10,3])
 
