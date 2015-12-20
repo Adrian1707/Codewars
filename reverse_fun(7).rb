@@ -1,13 +1,22 @@
-def reverse_fun(str)
-  string_array = str.split('')
-  container_array = []
-  string_length = str.length-1
-  string_length.times do |x|
-    string_array.reverse!
-    container_array << string_array.shift
+# def reverse_fun(str)
+#   string_array = str.split('')
+#   container_array = []
+#   string_length = str.length-1
+#   string_length.times do |x|
+#     string_array.reverse!
+#     container_array << string_array.shift
+#   end
+#     final_array = container_array + string_array
+#     final_array.join('')
+# end
+
+def reverse_fun(s)
+  reversed_string = s.reverse
+  if reversed_string.size == 1
+    reversed_string
+  else
+    reversed_string[0] + reverse_fun(reversed_string[1..-1])
   end
-    final_array = container_array + string_array
-    final_array.join('')
 end
 
 
@@ -16,7 +25,7 @@ print reverse_fun("012345")
 # array = %w(1 2 3 4 5)
 
 # print array.shift
-# print array 
+# print array
 # 012345
 # 543210
 # 501234
