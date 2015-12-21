@@ -19,7 +19,7 @@ print strong_enough([[5,5,5],[5,5,5],[1,1,1]],1)
 
 #puts (1000)*2.7182818**(-0.01*3)
 
-#ALTERNATE CODE 
+#ALTERNATE CODE
 
 #def strong_enough( earthquake, age )
   #e_strength = earthquake.map{ |shockwave| shockwave.inject(:+) }.inject(:*)

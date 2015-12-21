@@ -1,5 +1,5 @@
 def extract_ids(data)
- data.to_s.scan(/\d+/).map(&:to_i) 
+ data.to_s.scan(/\d+/).map(&:to_i)
 end
 
 data = {
@@ -21,4 +21,4 @@ print extract_ids(data)
 # print number_string.scan(/\d+/)
 
 #The plus sign is used in the \d to ensure that when we scan the numbers,
-#the double digit numbers aren't split up into their own individual strings. 
+#the double digit numbers aren't split up into their own individual strings.

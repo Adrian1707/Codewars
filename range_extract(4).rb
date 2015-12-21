@@ -37,8 +37,8 @@ def solution(list)
 end
 
 
-# print solution([-6, -3, -2, -1, 0, 1, 3, 4, 5, 7, 8, 9, 10, 11, 14, 15, 17, 18, 19, 20])
+print solution([-6, -3, -2, -1, 0, 1, 3, 4, 5, 7, 8, 9, 10, 11, 14, 15, 17, 18, 19, 20])
 
-print solution([1,2,3,4])
+# print solution([1,2,3,4])
 #
 #iterate through array. Check if number is one less than the next one
