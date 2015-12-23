@@ -5,5 +5,5 @@ function divisibleBy(numbers, divisor){
       newArray.push(numbers[i])
      }
   }
-    return newArray; 
+    return newArray;
 }
