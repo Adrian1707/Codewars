@@ -17,6 +17,6 @@ function factors(x){
 	return factorArray.reverse();
 }
 
-debug(factors("dn"))
+debug(factors(54))
 // debug(factors(10))
 
