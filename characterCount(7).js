@@ -22,8 +22,23 @@ function characterCounter(string){
 	else{
 		return false;
 	}
-}
-debug(characterCounter("ababab"))
+}x
+
+// function characterCounter(s)
+// {
+//     s = s.toLowerCase();
+//     var firstCnt = s.split(s[0]).length-1;
+//     var otherCnt = -1;
+//     return firstCnt;
+//     for (var i = 0; i < s.length; i++)
+//     {
+//         otherCnt = s.split(s[i]).length - 1;
+//         if (otherCnt !== firstCnt)
+//           return false;
+//     }
+//     return true;
+// }
+debug(characterCounter("abcdef"))
 //if the number of zeros is higher then the maximum number in the array, it's invalid
 // debug(characterCounter(""))
 // debug(characterCounter("7huqoxigt2p*gvk@:uaq4%bg1ma77hhuqooxxiitt22pp**vvkk@@::a44%bb11mm"))
