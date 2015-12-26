@@ -1,28 +1,58 @@
+# def decode(string)
+#       if string.class != String
+#         return "Input is not a string"
+#       else
+#       string_array = string.downcase.split('')
+#       alphabet_array = "abcdefghijklmnopqrstuvwxyz".split('')
+#       new_string = ""
+#       string_array.map! do |x|
+#         letter_index = alphabet_array.index(x)
+#         if x =~ /[A-Za-z]/
+#           alphabet_array[-letter_index-1]
+#         else
+#           x
+#         end
+#       end
+#       final_string = string_array.join('')
+#       end
+#       if final_string =~ /\s/
+#         final_string.capitalize
+#       else
+#         final_string
+#       end
+# end
+
 def decode(string)
-    string_array = string.downcase.split('')
-    alphabet_array = "abcdefghijklmnopqrstuvwxyz".split('')
-    upcase_alphabet_array = "abcdefghijklmnopqrstuvwxyz".upcase.split('')
-    new_string = ""
-    string_array.map! do |x|
-      letter_index = alphabet_array.index(x)
-      if x =~ /[A-Za-z]/
-        alphabet_array[-letter_index-1]
+      if string.class != String
+        return "Input is not a string"
       else
-        x
+      string_array = string.downcase.split('')
+      alphabet_array = "abcdefghijklmnopqrstuvwxyz".split('')
+      new_string = ""
+      string_array.map! do |x|
+        letter_index = alphabet_array.index(x)
+        if x =~ /[A-Za-z]/
+          alphabet_array[-letter_index-1]
+        else
+          x
+        end
       end
-    end
-    final_string = string_array.join('')
-    if final_string =~ /\s/
-      final_string.capitalize
-    else
-      final_string
-    end
+      final_string = string_array.join('')
+      end
+      if final_string =~ /\s/
+        final_string_array = final_string.split('? ')
+        final_string_array.map! do |x|
+          x.capitalize
+        end
+        final_string_array.join('? ')
+      else
+        final_string
+      end
 end
 
 
 
-
-print decode("Blf zoivzwb szw 10 yvvih")
+print decode("See? i'm not that drunk")
 
 # print decode("Ovg'h hdrn rm gsv ulfmgzrm!")
 
