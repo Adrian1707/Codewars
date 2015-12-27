@@ -26,41 +26,74 @@ class WordDictionary
     end
   end
 
-  def replace_full_stops(word)
-    word_array = word.split('')
-    full_stop_index = word_array.index('.')
-    letter = "a"
-    valid_word = false
-      while(valid_word == false)
-        word_array[full_stop_index] = letter
-        if @words.include?(word_array.join(''))
-          valid_word = true
-          return true
-        else
-          letter = letter.next
-        end
-        break if letter == "z"
+  def full_stop_positions(word)
+  @word_array = word.split('')
+  @full_stop_positions = []
+    @word_array.each_with_index do |x,i|
+      if x == "."
+        @full_stop_positions << i
       end
-      return false
+    end
   end
+
+  def find_equal_length_words(word)
+    @equal_length_words = []
+    @words.each do |x|
+      if x.length == word.length
+        @equal_length_words << x
+      end
+    end
+  end
+
+  def replace_full_stops(word)
+    full_stop_positions(word)
+    find_equal_length_words(word)
+    @equal_length_words.map! do |x|
+      x.split('')
+    end
+    word_array = word.split('')
+      word_array.map.with_index do |x,i|
+        if x == "."
+          word_array[i].replace(@equal_length_words[0][i])
+        end
+      end
+      # word_array
+
+      join_word = word_array.join('')
+    if @words.include?(join_word)
+      return true
+    else
+      return false
+    end
+
+end
 
 end
 
 wd = WordDictionary.new()
-wd.add_word('co')
-wd.add_word('ate')
+wd.add_word('a')
+wd.add_word('at')
+# wd.add_word('ate')
 wd.add_word('ear')
 wd.add_word('booth')
-wd.add_word('codewars')
 wd.add_word('co')
 wd.add_word('cod')
 wd.add_word('code')
 wd.add_word('codewars')
 # print wd.words
-print wd.search("co..w..")
-# print wd.search("a")
+# print wd.search("boot.")
+# print wd.search("co..wa..")
+print wd.search("ea.")
+
 # print "a".next
 # print wd.words[0]
+
+"co..w..s" == "codewars" #length is the same.
+#take the word with dots in, and take all the words with the same length as this word
+#then iterate over the word with dots in. If the element is a dot, take note of the index
+#then replace the element in the same index with the dot.
+
+# print array.permutation{|x| p x }
 #firstly check if full stop in search method arguments contains full stop
 
 #replace with full stops method will use recursion to replace each full stop
