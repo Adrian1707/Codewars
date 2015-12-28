@@ -52,19 +52,25 @@ class WordDictionary
       x.split('')
     end
     word_array = word.split('')
-      word_array.map.with_index do |x,i|
+      word_array.map! do |x,i|
         if x == "."
-          word_array[i].replace(@equal_length_words[0][i])
+          @equal_length_words.each do |y|
+            x = y
+          end
         end
       end
-      # word_array
+        final_array = word_array[2]
+        final_array.map! do |x|
+            x.join('')
+        end
+        final_array.all? {|word| @words.include?(word)}
 
-      join_word = word_array.join('')
-    if @words.include?(join_word)
-      return true
-    else
-      return false
-    end
+      # join_word = word_array.join('')
+    # if @words.include?(join_word)
+    #   return true
+    # else
+    #   return false
+    # end
 
 end
 
@@ -74,10 +80,10 @@ wd = WordDictionary.new()
 wd.add_word('a')
 wd.add_word('at')
 # wd.add_word('ate')
-wd.add_word('ear')
+wd.add_word('eater')
 wd.add_word('booth')
 wd.add_word('co')
-wd.add_word('cod')
+# wd.add_word('cod')
 wd.add_word('code')
 wd.add_word('codewars')
 # print wd.words
