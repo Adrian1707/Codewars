@@ -3,11 +3,11 @@ class Robot
   attr_reader :memorised_words
 
   def initialize
-    @memorised_words = ["I","already","know","the","word","do","not","understand","input","Thank","thank","you","for","teaching","me"]
+    @memorised_words = ["i","already","know","the","word","do","not","understand","input","Thank","thank","you","for","teaching","me"]
   end
 
   def learn_word(word)
-    return "I already know the word #{word}" if has_word?(word) || @memorised_words.include?(word.downcase) || @memorised_words.join('').split('').include?(word.downcase)
+    return "I already know the word #{word}" if has_word?(word) || @memorised_words.include?(word.downcase)
     return "I do not understand the input" if word != word[/[a-zA-Z]+/] || word.match(/\s/)
     word.downcase! unless word == word.upcase
     @memorised_words << word
