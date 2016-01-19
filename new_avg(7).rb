@@ -2,12 +2,12 @@
   def new_avg(arr,newavg)
       current_average = arr.inject(:+)/arr.length
       answer = 0
-      while current_average != newavg
-      answer+=1
-      arr.push(answer)
-      current_average = arr.inject(:+)/arr.length
-      arr.pop
-      end
+        while current_average != newavg
+        answer+=1
+        arr.push(answer)
+        current_average = arr.inject(:+)/arr.length
+        arr.pop
+        end
       answer
   end
 
