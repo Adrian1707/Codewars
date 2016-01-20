@@ -2,18 +2,19 @@
   def new_avg(arr,newavg)
       current_average = arr.inject(:+)/arr.length
       answer = 0
-        while current_average != newavg
-        answer+=1
-        arr.push(answer)
-        current_average = arr.inject(:+)/arr.length
-        arr.pop
+        until current_average == newavg
+          answer+=1
+          arr.push(answer)
+          current_average = arr.inject(:+)/arr.length
+          arr.pop
         end
       answer
   end
 
-print new_avg([14, 30, 5, 7, 9, 11, 15],92) #645
+# print [14, 30, 5, 7, 9, 11, 15].inject(:+)/7
+print new_avg([14, 30, 5, 7, 9, 11, 15],14) #645
 
-print new_avg([14, 30, 5, 7, 9, 11, 16], 90) #628
+# print new_avg([14, 30, 5, 7, 9, 11, 16], 90) #628
 
 
 # #
