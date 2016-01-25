@@ -7,9 +7,10 @@ def format_decimal(num):
     return float(answer)
 
 
+
 #alternate answer
 # def format_decimal(num):
-#     return int(num*100)/100.0   
+#     return int(num*100)/100.0
 
 
 print format_decimal(125.7892)
