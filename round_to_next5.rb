@@ -1,13 +1,13 @@
 def round_to_next_5(n)
-	if n % 5 == 0 
-	return n 
-	elsif 
-		while n % 5 > 0 
+	if n % 5 == 0
+	return n
+	elsif
+		while n % 5 > 0
 			n +=1
-		end 
-	end 
-	return n 
-end  
+		end
+	end
+	return n
+end
 
 # def round_to_next_5(n)
 # p n
@@ -26,4 +26,4 @@ end
 print round_to_next_5(97)
 
 
-# print 5 % 2 
+# print 5 % 2
