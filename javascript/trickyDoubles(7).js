@@ -8,7 +8,7 @@ function trickyDoubles(number){
 }
 
 function numberIsADouble(number){
-	var doubles = (number).toString(10).split("").map(function(t){return parseInt(t)})
+	var doubles = (number).toString(number.length).split("").map(function(t){return parseInt(t)})
 	var half_length = Math.ceil(doubles.length / 2);    
 	var leftSide = doubles.splice(0,half_length);
 	if(JSON.stringify(doubles) === JSON.stringify(leftSide)){
@@ -19,8 +19,8 @@ function numberIsADouble(number){
 	}
 }
 
-debug(trickyDoubles(434))
+// debug(trickyDoubles(434))
 
 
-// debug(numberIsADouble(2223))
+debug(numberIsADouble(2222))
 // debug(new Array(5))
