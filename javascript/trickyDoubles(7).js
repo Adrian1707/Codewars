@@ -19,8 +19,31 @@ function numberIsADouble(number){
 	}
 }
 
+debug(trickyDoubles(4546))
+
+//alternate code 
+
+// function isTrickyDouble (n)
+// {
+//   n = n.toString();
+//   var result = n.slice(0,(n.length/2)) === n.slice(n.length/2);
+//   return result;
+// }
+
+
+// function trickyDoubles(n)
+// {
+//   if (!isTrickyDouble(n)) {
+//     return n*2;
+//   }
+
+//   return n;
+// }
+
+
 // debug(trickyDoubles(434))
 
 
-debug(numberIsADouble(2222))
+// debug(numberIsADouble(2222))
 // debug(new Array(5))
+
