@@ -5,6 +5,4 @@ def next_pal(val):
         val+=1
     return val
 
-print next_pal(2541)
-
-# print int(str(11)[::-1])
+print next_pal(254)
