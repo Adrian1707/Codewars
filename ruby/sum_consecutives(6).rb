@@ -10,8 +10,17 @@ def sum_consecutives(arr)
   replaced_array.map { |x| x == "repeat" ? x = grouped_array.shift : x = x }
 end
 
+#alternate code
+# def sum_consecutives(s)
+#    s.chunk { |n| n }.map { |chunk| chunk.last.reduce(:+) }
+# end
+
+#chunk is best used for this. When we array.chunk{|n| n } this returns an enumerable which we can convert to an array
+
+# print chunked_array #[[1, [1]], [4, [4, 4, 4]], [0, [0]], [4, [4]], [3, [3, 3]], [1, [1]]]
+#So as you can see this splits the array up into subarrays which then allows us to spot those duplicate consecutive values
+#in the second index of each array. It's now a conditional saying if the second element of each array in chunked_array has a
+#length greater than 1, then simply sum up the values with inject(:+)
 print sum_consecutives([1,4,4,4,0,4,3,3,1])
-
-print sum_consecutives([1,1,7,7,3])
-
-print sum_consecutives([-5,-5,7,7,12,0])
+# print sum_consecutives([1,1,7,7,3])
+# print sum_consecutives([-5,-5,7,7,12,0])
