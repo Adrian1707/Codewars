@@ -10,7 +10,7 @@ def max_rot(num)
     i+=1
   end
   numbers << num
-  numbers.uniq!.max
+  # numbers.uniq!.max
 end
 
-print max_rot(56789)
+print max_rot(123456)

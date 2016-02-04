@@ -21,6 +21,6 @@ end
 #So as you can see this splits the array up into subarrays which then allows us to spot those duplicate consecutive values
 #in the second index of each array. It's now a conditional saying if the second element of each array in chunked_array has a
 #length greater than 1, then simply sum up the values with inject(:+)
-print sum_consecutives([1,4,4,4,0,4,3,3,1])
+print sum_consecutives([11,11,3,4,2,2,2,11,3,3,9])
 # print sum_consecutives([1,1,7,7,3])
 # print sum_consecutives([-5,-5,7,7,12,0])
