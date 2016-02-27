@@ -10,3 +10,5 @@ function digitSum(string){
 }
 // 
 debug(digitSum("2468"))
+
+
